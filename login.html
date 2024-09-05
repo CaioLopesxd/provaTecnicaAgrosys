@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Formulário de Login -->
+      <form id="loginForm" class="form" onsubmit="login(event);">
+        <h2 style="text-align: center">Login</h2>
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="username" required />
+        <br />
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="password" required />
+        <br />
+        <button type="submit" id="buttonLogin" class="buttonStyle">
+          Login
+        </button>
+        <p class="link">
+          Não tem uma conta?
+          <a href="#" onclick="toggleForm()">Crie uma agora!</a>
+        </p>
+      </form>
+
+      <!-- Formulário de Registro -->
+      <form
+        id="registerForm"
+        class="form"
+        style="display: none"
+        onsubmit="registerNewUser(event);"
+      >
+        <h2 style="text-align: center">Cadastro</h2>
+        <label for="registerUsername">Username:</label>
+        <input type="text" id="registerUsername" name="username" required />
+        <br />
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" name="password" required />
+        <br />
+        <button type="submit" id="buttonRegister" class="buttonStyle">
+          Cadastrar
+        </button>
+        <p class="link">
+          Já tem uma conta? <a href="#" onclick="toggleForm()">Faça login!</a>
+        </p>
+      </form>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alasql@latest"></script>
+    <script>
+      // Inicialização do banco de dados
+      alasql(`
+        CREATE LOCALSTORAGE DATABASE IF NOT EXISTS agrosysdb;
+        ATTACH LOCALSTORAGE DATABASE agrosysdb;
+        USE agrosysdb;
+      `);
+
+      // Script para alteração dos formulários, login e registro
+      const loginForm = document.getElementById("loginForm");
+      const registerForm = document.getElementById("registerForm");
+
+      function toggleForm() {
+        if (registerForm.style.display === "none") {
+          registerForm.style.display = "flex";
+          loginForm.style.display = "none";
+        } else {
+          loginForm.style.display = "flex";
+          registerForm.style.display = "none";
+        }
+      }
+
+      // Função para criptografar a senha
+      function hashedPassWord(password) {
+        return CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
+      }
+
+      // Função para registrar um novo usuário
+      function registerNewUser(event) {
+        // Evita o recarregamento da página e esconder os dados da url
+        event.preventDefault();
+        alasql(`
+          CREATE TABLE IF NOT EXISTS users (username STRING, password STRING);
+        `);
+
+        const userName = document.getElementById("registerUsername").value;
+        const password = document.getElementById("registerPassword").value;
+        const hashedPassword = hashedPassWord(password);
+
+        const existingUser = alasql(
+          `
+          SELECT * FROM users WHERE username = ?
+        `,
+          [userName]
+        );
+
+        if (existingUser.length > 0) {
+          alert("Usuário já cadastrado!");
+          return;
+        }
+
+        try {
+          alasql(
+            `
+            INSERT INTO users (username, password) VALUES (?, ?)
+          `,
+            [userName, hashedPassword]
+          );
+          alert("Usuário cadastrado com sucesso!");
+          toggleForm();
+        } catch (error) {
+          alert("Erro ao cadastrar usuário!");
+        }
+      }
+
+      // Função para login do usuário
+      function login(event) {
+        // Evita o recarregamento da página e esconder os dados da url
+        event.preventDefault();
+        const userName = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
+        const hashedPassword = hashedPassWord(password);
+
+        const userExists = alasql(
+          `
+          SELECT * FROM users WHERE username = ? AND password = ?
+        `,
+          [userName, hashedPassword]
+        );
+
+        if (userExists.length > 0) {
+          window.location.href = "hub.html";
+        } else {
+          alert("Usuário ou senha inválidos!");
+        }
+      }
+    </script>
+  </body>
+</html>
