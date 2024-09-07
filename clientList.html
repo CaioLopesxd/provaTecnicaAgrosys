@@ -14,11 +14,16 @@
       <a href="cadClientAdress.html">Cadastrar Endereço</a>
       <a href="listClientAdress.html">Listar Endereços</a>
     </header>
+
     <!--
     Listagem de clientes via card, tentei tabela anteriormente mas ficou muito ruim no mobile, então optei por cards
     -->
+
     <main>
-      <h2 style="text-align: center">Lista de Clientes</h2>
+      <div class="inputDiv">
+        <h2>Lista de Clientes</h2>
+        <input type="text" id="findClient" />
+      </div>
       <section id="clientList" class="card-container"></section>
     </main>
 

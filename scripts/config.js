@@ -4,7 +4,6 @@ alasql(`
     USE agrosysdb;
 `);
 
-
 // Função para consultar e obter dados de uma tabela
 function getTableData(tableName) {
   return alasql(`SELECT * FROM ${tableName}`);
@@ -28,12 +27,12 @@ function downloadJSON(filename, data) {
 // Função para exportar o banco de dados
 function exportDatabase() {
   const usersData = getTableData("users");
-  const addressData = getTableData("adress");
+  const adressData = getTableData("adress");
   const clientsData = getTableData("clients");
 
   const allData = {
     users: usersData,
-    address: addressData,
+    adress: adressData,
     clients: clientsData,
   };
 
@@ -42,8 +41,6 @@ function exportDatabase() {
 }
 // Adicionar um manipulador de eventos ao botão
 document.getElementById("downloadDb").addEventListener("click", exportDatabase);
-
-
 
 // Agora ele pode importar um arquivo JSON com os dados do banco de dados.
 document.getElementById("importDb").addEventListener("click", function () {
@@ -70,11 +67,8 @@ document.getElementById("importDb").addEventListener("click", function () {
       const data = JSON.parse(event.target.result);
 
       // Inserir dados nas tabelas correspondentes
-      if (data.users) {
-        alasql("INSERT INTO users SELECT * FROM ?", [data.users]);
-      }
-      if (data.address) {
-        alasql("INSERT INTO address SELECT * FROM ?", [data.address]);
+      if (data.adress) {
+        alasql("INSERT INTO adress SELECT * FROM ?", [data.adress]);
       }
       if (data.clients) {
         alasql("INSERT INTO clients SELECT * FROM ?", [data.clients]);

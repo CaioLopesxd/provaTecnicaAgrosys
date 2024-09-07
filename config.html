@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/config.css" />
     <script src="https://cdn.jsdelivr.net/npm/alasql@latest"></script>
+    <script src="scripts/verifyUserSession.js"></script>
     <title>Menu</title>
   </head>
   <body>
@@ -18,14 +19,14 @@
     <main>
       <div class="import">
         <input type="file" id="fileInput" />
-        <button id="importDb">Importar Banco de Dados</button>
-        <div id="status"></div>
+        <button id="importDb">Carregar Banco de Dados</button>
+        <div id="status" style="text-align: center"></div>
       </div>
       <div class="export">
-        <button id="downloadDb">Exportar Banco de dados</button>
+        <button id="downloadDb">Baixar Banco de dados</button>
       </div>
     </main>
   </body>
-  <script src="scripts/verifyUserSession.js"></script>
+
   <script src="scripts/config.js"></script>
 </html>

@@ -1,0 +1,31 @@
+Durante o processo de desenvolvimento do código, tomei a liberdade de implementar sessões, criptografia de senha e conexões com algumas APIs, pois esses são procedimentos padrão para a segurança de qualquer aplicação web com login.
+
+Explicação das Telas
+
+1.Login
+
+Na tela de login, como solicitado, você pode criar um usuário e fazer o login na mesma página.
+
+2.Hub
+
+Na tela Hub, você se encontra em um menu onde tem acesso às configurações para carregar o banco de dados em formato JSON, além de um cabeçalho com as telas para o tratamento desses dados.
+
+3.Config
+
+Na tela Config, você tem acesso às seguintes opções: carregar um banco de dados ou baixar o banco de dados atual. Para carregar o banco de dados, basta selecionar o arquivo e clicar no botão indicado. Recomendo dar uma olhada no arquivo database_export.json, que se encontra na mesma pasta, para visualizar como nomeei as tabelas.
+
+4.CreateClient
+
+Na tela CreateClient, como o nome já indica, você pode cadastrar seus clientes. No entanto, existem uma série de regras para que o cadastro seja realizado com sucesso, como a validação do CPF e a verificação se esse CPF já foi cadastrado. Também é necessário informar pelo menos um número de telefone, além do nome e da data de nascimento.
+
+5.ClientList
+
+Na tela ClientList, você pode visualizar todos os clientes já cadastrados. Como o projeto exige que seja mobile-friendly, preferi listar os clientes como cards, pois em tabela não estava funcionando bem. Nesta tela, há um campo de busca onde você pode procurar o cliente desejado.
+
+6.CreateClientAddress
+
+Na tela CreateClientAddress, você pode selecionar o cliente desejado por meio de um campo de seleção. Nesse campo, é possível pesquisar o nome do cliente, o que elimina a necessidade de procurar na lista. Após selecionar o cliente, você pode cadastrar seu endereço apenas inserindo o CEP. Através do input, o JavaScript consulta uma API externa para capturar os dados desse CEP e preenchê-los nos campos, poupando tempo do cadastrado. É permitido cadastrar apenas um endereço como principal.
+
+7.ListClientAddress
+
+Na tela ListClientAddress, você pode novamente selecionar o cliente por meio de um campo de seleção. Após selecionar, você terá acesso a todos os endereços cadastrados para esse cliente, sejam eles principais ou não.

@@ -1,0 +1,381 @@
+{
+  "users": [
+  ],
+  "address": [
+    {
+      "clientId": 1,
+      "cep": "88808",
+      "street": "Rua Ipê do Morro",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": false,
+      "id": 1
+    },
+    {
+      "clientId": 1,
+      "cep": "88808380",
+      "street": "Rua Ipê do Morro",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 2
+    },
+    {
+      "clientId": 2,
+      "cep": "88808390",
+      "street": "Rua Mulungu do Litoral",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 3
+    },
+    {
+      "clientId": 7,
+      "cep": "88808-390",
+      "street": "Rua Mulungu do Litoral",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 4
+    },
+    {
+      "clientId": 14,
+      "cep": "88808-380",
+      "street": "Rua Ipê do Morro",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 5
+    },
+    {
+      "clientId": 10,
+      "cep": "88808-380",
+      "street": "Rua Ipê do Morro",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 6
+    },
+    {
+      "clientId": 5,
+      "cep": "88808-380",
+      "street": "Rua Ipê do Morro",
+      "neighborhood": "Jardim Montevidéu",
+      "city": "Criciúma",
+      "state": "SC",
+      "country": "Brasil",
+      "mainAdress": true,
+      "id": 7
+    }
+  ],
+  "clients": [
+    {
+      "completeName": "Caio Dos Santos Lopes",
+      "cpf": "097.762.369-60",
+      "birthDate": "2004-03-28",
+      "telephone": "",
+      "cellphone": "(48) 99127-4997",
+      "id": 1
+    },
+    {
+      "completeName": "Ana Silva",
+      "cpf": "123.456.789-00",
+      "birthDate": "1990-05-14",
+      "telephone": "(11) 98765-4321",
+      "cellphone": "(11) 91234-5678",
+      "id": 2
+    },
+    {
+      "completeName": "Bruno Oliveira",
+      "cpf": "234.567.890-12",
+      "birthDate": "1985-07-23",
+      "telephone": "(21) 97654-3210",
+      "cellphone": "(21) 99876-5432",
+      "id": 3
+    },
+    {
+      "completeName": "Carla Souza",
+      "cpf": "345.678.901-23",
+      "birthDate": "1992-11-30",
+      "telephone": "(31) 96543-2109",
+      "cellphone": "(31) 92345-6789",
+      "id": 4
+    },
+    {
+      "completeName": "Daniel Costa",
+      "cpf": "456.789.012-34",
+      "birthDate": "1988-09-16",
+      "telephone": "(41) 95432-1098",
+      "cellphone": "(41) 93456-7890",
+      "id": 5
+    },
+    {
+      "completeName": "Eduarda Santos",
+      "cpf": "567.890.123-45",
+      "birthDate": "1995-01-22",
+      "telephone": "(51) 94321-0987",
+      "cellphone": "(51) 94567-8901",
+      "id": 6
+    },
+    {
+      "completeName": "Fernando Lima",
+      "cpf": "678.901.234-56",
+      "birthDate": "1982-03-18",
+      "telephone": "(61) 93210-9876",
+      "cellphone": "(61) 95678-9012",
+      "id": 7
+    },
+    {
+      "completeName": "Gabriela Almeida",
+      "cpf": "789.012.345-67",
+      "birthDate": "1993-04-25",
+      "telephone": "(71) 92109-8765",
+      "cellphone": "(71) 96789-0123",
+      "id": 8
+    },
+    {
+      "completeName": "Henrique Ferreira",
+      "cpf": "890.123.456-78",
+      "birthDate": "1986-08-12",
+      "telephone": "(81) 91098-7654",
+      "cellphone": "(81) 97890-1234",
+      "id": 9
+    },
+    {
+      "completeName": "Isabela Rocha",
+      "cpf": "901.234.567-89",
+      "birthDate": "1991-06-07",
+      "telephone": "(91) 90987-6543",
+      "cellphone": "(91) 98901-2345",
+      "id": 10
+    },
+    {
+      "completeName": "João Pedro",
+      "cpf": "012.345.678-90",
+      "birthDate": "1994-12-29",
+      "telephone": "(11) 99876-5432",
+      "cellphone": "(11) 91234-5678",
+      "id": 11
+    },
+    {
+      "completeName": "Karina Martins",
+      "cpf": "123.456.789-01",
+      "birthDate": "1989-10-30",
+      "telephone": "(21) 98765-4321",
+      "cellphone": "(21) 97654-3210",
+      "id": 12
+    },
+    {
+      "completeName": "Lucas Pereira",
+      "cpf": "234.567.890-12",
+      "birthDate": "1996-11-15",
+      "telephone": "(31) 96543-2109",
+      "cellphone": "(31) 93456-7890",
+      "id": 13
+    },
+    {
+      "completeName": "Mariana Oliveira",
+      "cpf": "345.678.901-23",
+      "birthDate": "1983-05-25",
+      "telephone": "(41) 95432-1098",
+      "cellphone": "(41) 94567-8901",
+      "id": 14
+    },
+    {
+      "completeName": "Nicolas Santos",
+      "cpf": "456.789.012-34",
+      "birthDate": "1990-02-20",
+      "telephone": "(51) 94321-0987",
+      "cellphone": "(51) 95678-9012",
+      "id": 15
+    },
+    {
+      "completeName": "Olga Rodrigues",
+      "cpf": "567.890.123-45",
+      "birthDate": "1987-07-08",
+      "telephone": "(61) 93210-9876",
+      "cellphone": "(61) 96789-0123",
+      "id": 16
+    },
+    {
+      "completeName": "Paula Costa",
+      "cpf": "678.901.234-56",
+      "birthDate": "1998-09-26",
+      "telephone": "(71) 92109-8765",
+      "cellphone": "(71) 97890-1234",
+      "id": 17
+    },
+    {
+      "completeName": "Quintino Lima",
+      "cpf": "789.012.345-67",
+      "birthDate": "1992-03-17",
+      "telephone": "(81) 91098-7654",
+      "cellphone": "(81) 98901-2345",
+      "id": 18
+    },
+    {
+      "completeName": "Rafaela Almeida",
+      "cpf": "890.123.456-78",
+      "birthDate": "1994-12-05",
+      "telephone": "(91) 90987-6543",
+      "cellphone": "(91) 97654-3210",
+      "id": 19
+    },
+    {
+      "completeName": "Samuel Ferreira",
+      "cpf": "901.234.567-89",
+      "birthDate": "1985-04-14",
+      "telephone": "(11) 99876-5432",
+      "cellphone": "(11) 92345-6789",
+      "id": 20
+    },
+    {
+      "completeName": "Tatiane Rocha",
+      "cpf": "012.345.678-90",
+      "birthDate": "1993-08-22",
+      "telephone": "(21) 98765-4321",
+      "cellphone": "(21) 94567-8901",
+      "id": 21
+    },
+    {
+      "completeName": "Ugo Martins",
+      "cpf": "123.456.789-01",
+      "birthDate": "1990-11-13",
+      "telephone": "(31) 96543-2109",
+      "cellphone": "(31) 92345-6789",
+      "id": 22
+    },
+    {
+      "completeName": "Vanessa Pereira",
+      "cpf": "234.567.890-12",
+      "birthDate": "1987-01-09",
+      "telephone": "(41) 95432-1098",
+      "cellphone": "(41) 93456-7890",
+      "id": 23
+    },
+    {
+      "completeName": "William Santos",
+      "cpf": "345.678.901-23",
+      "birthDate": "1999-02-28",
+      "telephone": "(51) 94321-0987",
+      "cellphone": "(51) 94567-8901",
+      "id": 24
+    },
+    {
+      "completeName": "Xuxa Lima",
+      "cpf": "456.789.012-34",
+      "birthDate": "1984-06-30",
+      "telephone": "(61) 93210-9876",
+      "cellphone": "(61) 95678-9012",
+      "id": 25
+    },
+    {
+      "completeName": "Yara Costa",
+      "cpf": "567.890.123-45",
+      "birthDate": "1991-07-19",
+      "telephone": "(71) 92109-8765",
+      "cellphone": "(71) 96789-0123",
+      "id": 26
+    },
+    {
+      "completeName": "Zeca Rodrigues",
+      "cpf": "678.901.234-56",
+      "birthDate": "1995-09-24",
+      "telephone": "(81) 91098-7654",
+      "cellphone": "(81) 97890-1234",
+      "id": 27
+    },
+    {
+      "completeName": "Alice Almeida",
+      "cpf": "789.012.345-67",
+      "birthDate": "1986-12-04",
+      "telephone": "(91) 90987-6543",
+      "cellphone": "(91) 98901-2345",
+      "id": 28
+    },
+    {
+      "completeName": "Bruno Martins",
+      "cpf": "890.123.456-78",
+      "birthDate": "1994-10-02",
+      "telephone": "(11) 99876-5432",
+      "cellphone": "(11) 91234-5678",
+      "id": 29
+    },
+    {
+      "completeName": "Carla Souza",
+      "cpf": "901.234.567-89",
+      "birthDate": "1988-03-21",
+      "telephone": "(21) 98765-4321",
+      "cellphone": "(21) 97654-3210",
+      "id": 30
+    },
+    {
+      "completeName": "Daniel Costa",
+      "cpf": "012.345.678-90",
+      "birthDate": "1990-11-16",
+      "telephone": "(31) 96543-2109",
+      "cellphone": "(31) 92345-6789",
+      "id": 31
+    },
+    {
+      "completeName": "Eduarda Santos",
+      "cpf": "123.456.789-01",
+      "birthDate": "1985-02-28",
+      "telephone": "(41) 95432-1098",
+      "cellphone": "(41) 93456-7890",
+      "id": 32
+    },
+    {
+      "completeName": "Fernando Lima",
+      "cpf": "234.567.890-12",
+      "birthDate": "1997-07-11",
+      "telephone": "(51) 94321-0987",
+      "cellphone": "(51) 94567-8901",
+      "id": 33
+    },
+    {
+      "completeName": "Gabriela Almeida",
+      "cpf": "345.678.901-23",
+      "birthDate": "1989-10-14",
+      "telephone": "(61) 93210-9876",
+      "cellphone": "(61) 95678-9012",
+      "id": 34
+    },
+    {
+      "completeName": "Henrique Ferreira",
+      "cpf": "456.789.012-34",
+      "birthDate": "1992-04-09",
+      "telephone": "(71) 92109-8765",
+      "cellphone": "(71) 96789-0123",
+      "id": 35
+    },
+    {
+      "completeName": "Joel",
+      "cpf": "726.072.209-63",
+      "birthDate": "2024-09-16",
+      "telephone": "(31) 22644-9598",
+      "cellphone": "",
+      "id": 36
+    },
+    {
+      "completeName": "Bruno Oliveira",
+      "cpf": "987.654.321-00",
+      "birthDate": "2024-09-19",
+      "telephone": "(48) 99127-4997",
+      "cellphone": "(48) 99127-4997",
+      "id": 37
+    }
+  ]
+}

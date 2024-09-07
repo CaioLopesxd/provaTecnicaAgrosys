@@ -45,3 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(card);
   });
 });
+
+// Filtrar clientes pelo nome
+const findClient = document.getElementById("findClient");
+findClient.addEventListener("input", () => {
+  const inputValue = findClient.value;
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    const h3 = card.querySelector("h3");
+    const clientName = h3.textContent.toLowerCase();
+
+    if (clientName.includes(inputValue)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
