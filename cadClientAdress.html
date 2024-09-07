@@ -8,6 +8,12 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <a href="createClient.html">Cadastrar Cliente</a>
+      <a href="clientList.html">Listar Clientes</a>
+      <a href="hub.html">Home</a>
+      <a href="listClientAdress.html">Listar Endereços</a>
+    </header>
     <main>
       <form onsubmit="addClientAdress(event)">
         <select id="clientSelect" name="clientSelect" required>
@@ -66,7 +72,7 @@
             <label for="cep">CEP</label>
             <input
               type="text"
-              id="cep"
+              id="cep" 
               name="cep"
               required
               style="flex-grow: 0.4"

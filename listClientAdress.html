@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/alasql@latest"></script>
+    <link rel="stylesheet" href="styles/listClientAdress.css" />
     <title>Document</title>
   </head>
   <body>
-    <script>
-      alasql(`
-  ATTACH LOCALSTORAGE DATABASE agrosysdb;
-  USE agrosysdb;
-`);
-
-      alert(JSON.stringify(clients));
-    </script>
+    <header>
+      <a href="createClient.html">Cadastrar Cliente</a>
+      <a href="clientList.html">Listar Clientes</a>
+      <a href="hub.html">Home</a>
+      <a href="cadClientAdress.html">Cadastrar Endereço</a>
+    </header>
+    <main>
+      <form>
+        <select id="clientSelect" name="clientSelect" required>
+          <option value="" disabled selected>Selecione o cliente</option>
+        </select>
+        <div id="adress">
+          <!-- Exemplo de estrutura HTML para um endereço -->
+          <div class="address-card">
+            <p><strong>CEP:</strong></p>
+            <p><strong>Rua:</strong></p>
+            <p><strong>Bairro:</strong></p>
+            <p><strong>Cidade:</strong></p>
+            <p><strong>Estado:</strong></p>
+            <p><strong>Endereço Principal:</strong></p>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="scripts/verifyUserSession.js"></script>
+    <script src="scripts/listClientAdress.js"></script>
   </body>
 </html>

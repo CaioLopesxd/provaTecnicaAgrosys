@@ -1,35 +1,47 @@
+// Conectar ao banco de dados e selecionar todos os clientes
 alasql(`
-    ATTACH LOCALSTORAGE DATABASE agrosysdb;
-    USE agrosysdb;
+  ATTACH LOCALSTORAGE DATABASE agrosysdb;
+  USE agrosysdb;
 `);
 
-//query para selecionar todos os clientes
+// Query para selecionar todos os clientes
 const clients = alasql("SELECT * FROM clients");
 
-//função para formatar a data
+// Função para formatar a data no formato DD/MM/YYYY
 function explodeHifen(date) {
   const [year, month, day] = date.split("-");
   return `${day}/${month}/${year}`;
 }
 
-function formatPhoneNumbersIfNotHave(fone) {
-  if (fone === "") {
-    return "Não informado";
-  }
-  return fone;
+// Função para formatar números de telefone ou retornar "Não informado" se estiver vazio
+function formatPhoneNumbersIfNotHave(phone) {
+  return phone.trim() === "" ? "Não informado" : phone;
 }
 
-//função para listar os clientes em uma tabela
-const tbody = document.querySelector("tbody");
-clients.forEach((client) => {
-  const tr = document.createElement("tr");
-  tr.innerHTML = `
-        <td>${client.id}</td>
-        <td>${client.completeName}</td>
-        <td>${client.cpf}</td>
-        <td>${explodeHifen(client.birthDate)}</td>
-        <td>${formatPhoneNumbersIfNotHave(client.telephone)}</td>
-        <td>${formatPhoneNumbersIfNotHave(client.cellphone)}</td>
-    `;
-  tbody.appendChild(tr);
+// Adiciona os cartões ao container
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("clientList");
+
+  if (!container) {
+    console.error('O container com id "clientList" não foi encontrado.');
+    return;
+  }
+
+  clients.forEach((client) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+    <h3>${client.completeName}</h3>
+    <p><strong>ID:</strong> ${client.id}</p>
+    <p><strong>CPF:</strong> ${client.cpf}</p>
+    <p><strong>Data Nascimento:</strong> ${explodeHifen(client.birthDate)}</p>
+    <p><strong>Telefone:</strong> ${formatPhoneNumbersIfNotHave(
+      client.telephone
+    )}</p>
+    <p><strong>Celular:</strong> ${formatPhoneNumbersIfNotHave(
+      client.cellphone
+    )}</p>
+  `;
+    container.appendChild(card);
+  });
 });

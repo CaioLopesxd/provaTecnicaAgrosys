@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/clientList.css" />
+    <link rel="stylesheet" href="styles/config.css" />
     <script src="https://cdn.jsdelivr.net/npm/alasql@latest"></script>
-    <title>Lista de Clientes</title>
+    <title>Menu</title>
   </head>
   <body>
     <header>
       <a href="createClient.html">Cadastrar Cliente</a>
+      <a href="clientList.html">Listar Clientes</a>
       <a href="hub.html">Home</a>
       <a href="cadClientAdress.html">Cadastrar Endereço</a>
       <a href="listClientAdress.html">Listar Endereços</a>
     </header>
-    <!--
-    Listagem de clientes via card, tentei tabela anteriormente mas ficou muito ruim no mobile, então optei por cards
-    -->
     <main>
-      <h2 style="text-align: center">Lista de Clientes</h2>
-      <section id="clientList" class="card-container"></section>
+      <div class="import">
+        <input type="file" id="fileInput" />
+        <button id="importDb">Importar Banco de Dados</button>
+        <div id="status"></div>
+      </div>
+      <div class="export">
+        <button id="downloadDb">Exportar Banco de dados</button>
+      </div>
     </main>
-
-    <script src="scripts/clientList.js"></script>
-    <script src="scripts/verifyUserSession.js"></script>
   </body>
+  <script src="scripts/verifyUserSession.js"></script>
+  <script src="scripts/config.js"></script>
 </html>

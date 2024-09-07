@@ -18,13 +18,6 @@ main {
   flex-grow: 1;
   gap: 20px;
 }
-main a {
-  text-decoration: none;
-  color: #333;
-}
-main a:hover {
-  text-decoration: underline;
-}
 header {
   display: flex;
   justify-content: space-evenly;
@@ -41,16 +34,28 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-.showUserData {
-  text-align: center;
+.import {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-@media screen and (max-width: 500px) {
-  header {
-    padding: 20px 5px;
-    font-size: 0.8rem;
-    gap: 5px;
-  }
-  form {
-    width: 95%;
-  }
+button {
+  height: 2.5rem;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+button:hover {
+  background-color: #555;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fafafa;
 }
